@@ -13,6 +13,26 @@
 
   <link rel="stylesheet" href="styles.css">
 
+  <style>
+    body {
+      background-image: url(images/floppabackground.png);
+      background-size: cover;
+      background-position: center;
+    }
+
+    /* Example of CSS animation */
+    .fun-box {
+      width: 200px;
+      height: 200px;
+      background-color: #f3c;
+      transition: transform 0.3s;
+    }
+
+    .fun-box:hover {
+      transform: scale(1.1);
+    }
+  </style>
+
   <title>Portfolio</title>
 </head>
 <body>
@@ -146,5 +166,17 @@
       </div>
     </section>
   </main>
+
+  <!-- Example of interactive JavaScript -->
+  <script>
+    // Fun box interactive effect
+    const funBoxes = document.querySelectorAll('.fun-box');
+
+    funBoxes.forEach((box) => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('fun-box-clicked');
+      });
+    });
+  </script>
 </body>
 </html>
